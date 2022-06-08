@@ -2,7 +2,7 @@
   "name": "uniqueweb/translate-order-state",
   "description": "Plugin for translating order states",
   "type": "shopware-platform-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     {
       "name": "uniqueweb | Maximilian Schwarz"
