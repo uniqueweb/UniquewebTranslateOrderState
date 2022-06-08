@@ -1,0 +1,40 @@
+{
+  "name": "uniqueweb/translate-order-state",
+  "description": "Plugin for translating order states",
+  "type": "shopware-platform-plugin",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "uniqueweb | Maximilian Schwarz"
+    }
+  ],
+  "require": {
+    "shopware/core": "~6.4"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "uniqueweb\\TranslateOrderState\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "uniqueweb\\TranslateOrderState\\UniquewebTranslateOrderState",
+    "copyright": "(c) by uniqueweb",
+    "label": {
+      "de-DE": "Bestellstatus übersetzen",
+      "en-GB": "Translate order status"
+    },
+    "description": {
+      "de-DE": "Ermöglicht das übersetzen der Bestellstatus",
+      "en-GB": "Allows to translate the order status"
+    },
+    "manufacturerLink": {
+      "de-DE": "https://www.unique-web.de",
+      "en-GB": "https://www.unique-web.de"
+    },
+    "supportLink": {
+      "de-DE": "https://www.unique-web.de",
+      "en-GB": "https://www.unique-web.de"
+    }
+  }
+}

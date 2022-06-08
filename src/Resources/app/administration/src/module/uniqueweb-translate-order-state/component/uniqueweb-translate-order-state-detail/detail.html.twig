@@ -1,0 +1,57 @@
+<sw-page class="uniqueweb-predefined-carts-detail">
+    <template #smart-bar-header>
+        <h2>{{ $tc('uniqueweb-translate-order-state.general.title') }}</h2>
+    </template>
+
+    <template #smart-bar-actions>
+        <sw-button
+                class="cancel-action"
+                :disabled="orderState !== null && isLoading"
+                @click="onCancel">
+            {{ $tc('global.default.cancel') }}
+        </sw-button>
+
+        <sw-button-process
+                v-model="isSaveSuccessful"
+                class="uniqueweb-translate-order-state-detail__save-action"
+                variant="primary"
+                :is-loading="isLoading"
+                :disabled="isLoading"
+                :process-success="isSaveSuccessful"
+                @process-finish="saveFinish"
+                @click.prevent="onSave">
+            {{ $tc('global.default.save') }}
+        </sw-button-process>
+    </template>
+
+    <template #language-switch>
+        <sw-language-switch
+                :disabled="orderState.isNew()"
+                @on-change="onChangeLanguage">
+        </sw-language-switch>
+    </template>
+
+    <template #content>
+        <sw-card-view>
+            <div v-if="isLoading">
+                <sw-skeleton></sw-skeleton>
+            </div>
+            <div v-else>
+                <sw-language-info
+                        :entity-description="$tc('uniqueweb-translate-order-state.general.title')"
+                        :is-new-entity="orderState.isNew()">
+                </sw-language-info>
+
+                <sw-card :title="$tc('uniqueweb-translate-order-state.detail.cardTitleGroupInfo')">
+                    <sw-container columns="9fr" gap="0">
+                        <sw-text-field
+                                v-model="orderState.name"
+                                required
+                                :label="$tc('sw-product.list.columnName')">
+                        </sw-text-field>
+                    </sw-container>
+                </sw-card>
+            </div>
+        </sw-card-view>
+    </template>
+</sw-page>

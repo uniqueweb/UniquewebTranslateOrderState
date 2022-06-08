@@ -1,0 +1,15 @@
+{
+    "uniqueweb-translate-order-state": {
+        "general": {
+            "title": "Order state",
+            "description": "Overview order state"
+        },
+        "index": {
+            "messageEmpty": "No order states available yet",
+            "columnTechnicalName": "Technical name"
+        },
+        "detail": {
+            "cardTitleGroupInfo": "General"
+        }
+    }
+}

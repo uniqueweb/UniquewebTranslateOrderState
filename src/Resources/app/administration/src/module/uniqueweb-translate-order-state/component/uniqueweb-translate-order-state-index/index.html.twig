@@ -1,0 +1,40 @@
+<sw-page class="uniqueweb-translate-order-state-index">
+    <template slot="smart-bar-header">
+        <h2>
+            {{ $tc('sw-order.list.textOrders') }}
+            <sw-icon name="small-arrow-medium-right" small></sw-icon>
+            {{ $tc('uniqueweb-translate-order-state.general.title') }}
+
+            <span v-if="!isLoading" class="sw-page__smart-bar-amount">
+                ({{ total }})
+            </span>
+        </h2>
+    </template>
+
+    <template #language-switch>
+        <sw-language-switch @on-change="onChangeLanguage"></sw-language-switch>
+    </template>
+
+    <template slot="content">
+        <sw-entity-listing
+                v-if="entitySearchable"
+                :repository="stateMachineStateRepository"
+                :columns="stateMachineStateColumns"
+                :items="orderStates"
+                detail-route="uniqueweb.translate.order.state.detail"
+                :is-loading="isLoading"
+                :allow-inline-edit="true"
+                :show-selection="false"
+                :allow-edit="true"
+                :allow-view="true"
+                :allowDelete="false"
+                full-page
+                @update-records="updateTotal"
+        >
+        </sw-entity-listing>
+
+        <template v-if="!isLoading && !total">
+            <sw-empty-state :title="$tc('uniqueweb-translate-order-state.index.messageEmpty')"></sw-empty-state>
+        </template>
+    </template>
+</sw-page>

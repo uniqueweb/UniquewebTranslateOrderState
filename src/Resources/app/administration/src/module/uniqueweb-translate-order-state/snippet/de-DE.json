@@ -1,0 +1,15 @@
+{
+    "uniqueweb-translate-order-state": {
+        "general": {
+            "title": "Bestellstatus",
+            "description": "Übersicht Bestellstatus"
+        },
+        "index": {
+            "messageEmpty": "Noch kein Bestellstatus verfügbar",
+            "columnTechnicalName": "Technischer Name"
+        },
+        "detail": {
+            "cardTitleGroupInfo": "Allgemein"
+        }
+    }
+}
