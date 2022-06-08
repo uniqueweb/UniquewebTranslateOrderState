@@ -19,6 +19,7 @@
   },
   "extra": {
     "shopware-plugin-class": "uniqueweb\\TranslateOrderState\\UniquewebTranslateOrderState",
+    "plugin-icon": "src/Resources/plugin.png",
     "copyright": "(c) by uniqueweb",
     "label": {
       "de-DE": "Bestellstatus übersetzen",
