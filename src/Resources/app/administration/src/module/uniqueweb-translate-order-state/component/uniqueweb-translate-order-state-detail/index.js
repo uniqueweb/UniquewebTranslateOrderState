@@ -74,7 +74,6 @@ Component.register('uniqueweb-translate-order-state-detail', {
 
         saveFinish() {
             this.isSaveSuccessful = false;
-            this.$router.push({ name: 'uniqueweb.translate.order.state.detail', params: { id: this.orderState.id } });
         },
 
         onCancel() {
