@@ -42,11 +42,12 @@
                         :is-new-entity="orderState.isNew()">
                 </sw-language-info>
 
-                <sw-card :title="$tc('uniqueweb-translate-order-state.detail.cardTitleGroupInfo')">
+                <sw-card :title="$tc('uniqueweb-translate-order-state.detail.cardTitleGroupInfo')" positionIdentifier="uniqueweb-translate-order-state-detail">
                     <sw-container columns="9fr" gap="0">
                         <sw-text-field
                                 v-model="orderState.name"
                                 required
+                                :placeholder="orderState.translated.name"
                                 :label="$tc('sw-product.list.columnName')">
                         </sw-text-field>
                     </sw-container>

@@ -2,7 +2,7 @@
 Shopware 6 Plugin for translating order states
 
 ## Requirements
-This plugin supports Shopware >= 6.4
+This plugin supports Shopware >= 6.5
 
 ## Installation
 The plugin can easily be integrated via Composer:
