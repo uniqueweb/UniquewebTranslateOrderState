@@ -1,5 +1,5 @@
 <sw-page class="uniqueweb-translate-order-state-index">
-    <template slot="smart-bar-header">
+    <template #smart-bar-header>
         <h2>
             {{ $tc('sw-order.list.textOrders') }}
             <sw-icon name="regular-chevron-right-xs" small></sw-icon>
@@ -15,7 +15,7 @@
         <sw-language-switch @on-change="onChangeLanguage"></sw-language-switch>
     </template>
 
-    <template slot="content">
+    <template #content>
         <sw-entity-listing
                 v-if="entitySearchable"
                 :repository="stateMachineStateRepository"

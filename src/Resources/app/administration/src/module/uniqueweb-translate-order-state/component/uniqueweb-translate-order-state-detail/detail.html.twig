@@ -12,7 +12,7 @@
         </sw-button>
 
         <sw-button-process
-                v-model="isSaveSuccessful"
+                v-model:value="isSaveSuccessful"
                 class="uniqueweb-translate-order-state-detail__save-action"
                 variant="primary"
                 :is-loading="isLoading"
@@ -45,7 +45,7 @@
                 <sw-card :title="$tc('uniqueweb-translate-order-state.detail.cardTitleGroupInfo')" positionIdentifier="uniqueweb-translate-order-state-detail">
                     <sw-container columns="9fr" gap="0">
                         <sw-text-field
-                                v-model="orderState.name"
+                                v-model:value="orderState.name"
                                 required
                                 :placeholder="orderState.translated.name"
                                 :label="$tc('sw-product.list.columnName')">
